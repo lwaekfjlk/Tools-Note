@@ -1,4 +1,4 @@
-# Linux Note
+# Linux_Lec2
 
 * 文件压缩
 
