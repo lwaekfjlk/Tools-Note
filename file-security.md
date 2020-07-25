@@ -6,7 +6,7 @@
 
   权限分为 r读权限 / w写权限 / x执行权限
 
-  ![截屏2020-07-14上午8.22.04](/Users/yuhaofei/Desktop/Linux-Note/ls -l.png)
+  ![截屏2020-07-14上午8.22.04](./pic/ls -l.png)
 
 * 改变用户权限
 

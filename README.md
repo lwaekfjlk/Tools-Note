@@ -1,7 +1,7 @@
 # Linux-Note
 Record Practical Tricks of Linux Command Line learned from Jiangmin Ji in 2020.
 
-![talk_is_cheap](/Users/yuhaofei/Desktop/Linux-Note/talk_is_cheap.png)
+![talk_is_cheap](./pic/talk_is_cheap.png)
 
 Notes include:
 
