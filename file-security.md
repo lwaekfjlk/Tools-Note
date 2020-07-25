@@ -6,9 +6,7 @@
 
   权限分为 r读权限 / w写权限 / x执行权限
 
-  ![talk_is_cheap](./pic/talk_is_cheap.png)
-
-  ![ls](./pic/ls -l.png)
+  ![talk_is_cheap](./pic/ls -l.png)
 
 * 改变用户权限
 
