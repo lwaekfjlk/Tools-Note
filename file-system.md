@@ -1,91 +1,4 @@
-# Linux_Lec1
-
-* shell通配符
-
-  * [abc]匹配a,b,c中的一个字符
-
-  * {a,b,c}匹配a与b与c
-
-  * a*匹配以a开头的字符，\*可以表示多个
-  * ?.txt匹配txt后缀的文件,?为位置字符，只能表示一个
-
-* shell提示符
-
-  ```shell
-  echo $PS1
-  PS1="$" 
-  //修改提示符
-  ```
-
-* 改变用户身份
-
-  ```shell
-  su root // 切换为root用户
-  ```
-
-* 显示当前路径
-
-  ```shell
-  pwd
-  ```
-
-* 显示信息
-
-  ```bash
-  whoami //显示用户名
-  uname  //显示操作系统信息
-  hostname //显示登陆在主机上的名字
-  id	   //显示用户id与组用户
-  ```
-
-* 创建和删除目录
-
-  ```bash
-  mkdir // 创建
-  rmdir // 删除
-  ```
-
-* 添加PATH
-
-  ```bash
-  PATH = ~/bin : $PATH : . // 添加 ~/bin 与 当前目录
-  ```
-
-* cat命令
-
-  ```bash
-  cat a b //同时显示一个或者多个文件的内容
-  ```
-
-* clear命令
-
-  ```bash
-  clear //清除屏幕
-  ```
-
-* alias命令
-
-  ```bash
-  alias [name[=string]] // 给name建立string别名
-  unalias //删除别名
-  ```
-
-* Ctrl+X命令
-
-  ```bash
-  zsh
-  zsh
-  zsh // 进入三层嵌套的shell
-  Ctrl+D // 退出一层shell
-  Ctrl+C // 退出当前命令程序
-  Ctrl+Z // 暂停当前命令执行
-  ```
-
-* 查看当前shell
-
-  ```bash
-  echo $SHELL
-  ```
+# File_System
 
 * vi / vim
 
@@ -213,6 +126,100 @@
   wc -c a.txt//字符数
   wc -w a.txt//单词数
   ls -l | wc -l //统计当前目录下有几行
+  ```
+
+* 文件压缩
+
+  | 压缩     | 解压        | 扩展名 |
+  | -------- | ----------- | ------ |
+  | compress | uncompress  | .Z     |
+  | tar+gzip | gzip        | .tgz   |
+  | gzip     | gunzip/gzip | .gz    |
+  | zip      | unzip       | .zip   |
+  | bzip2    | bzip2 -d    | .bz2   |
+
+  zcat,zmore查看bash中压缩的文本文件
+
+  tar 将多个文件打包，封装的集成工具
+
+  ```bash
+  tar -tzvf a b // gzip压缩
+  tar -xzvf a   // gzip解压
+  tar -cjvf a b // bz2压缩
+  tar -xjvf a   // bz2解压
+  ```
+
+  7z a create.zip ./* 压缩文件夹所有内容到create.zip
+
+  7z d wantounzip.zip ./ 解压文件夹所有内容到目标目录
+
+  
+
+* 安装包工具
+
+  Debian/Ubuntu		sudo apt install/remove
+
+  CentOS/RedHat/Fedora	sudo yum install/remove
+
+​		apt 是Debian系列的dpkg工具的核心，dpkg中其他工具还有apt-get/apt-cache/aptitude
+
+* 文件排序
+
+  ```shell
+  ls -l | sort -k 9 // 按照文件的第九列信息开始排列
+  ```
+
+* 查找命令与文件名字
+
+  ```shell
+  find . -name "*.c"  // 查找
+  find . -name "*.c" -rm {} // 删除文件
+  where pip // 在PATH变量制定的路径中，查找系统命令的位置
+  ```
+
+* 添加环境变量
+
+  ```shell
+  PATH = (want to add path):$PATH
+  PATH = .:$PATH // 添加当前路径
+  ```
+
+* 查看日历
+
+  ```shell
+  cal // 显示当前月份
+  cal 2020 // 显示当前年份
+  ```
+
+* 搜索文件内容
+
+  ```shell
+  grep/fgrep/egrep "正则表达式" 文件名
+  ```
+
+* 查看历史文件
+
+  ~/.bash_history 查看历史命令
+
+  ```shell
+  history // 查看历史命令
+  ```
+
+* Sed 流编辑器
+
+  命令行直接实现文本替换
+
+  ```shell
+  sed 's/Unix/Linux' Linux.txt //将文件中的一个Unix替换成linux
+  sed 's/Unix/Linux/g' Linux.txt //将文件中的全部Unix替换成linux
+  ```
+
+* Linux 与 Window 的文件转换
+
+  使用dos2unix / unix2dos
+
+  ```shell
+  dos2unix a.txt
   ```
 
   

@@ -1,4 +1,6 @@
-# Linux_Lec3
+# Process & Pipe & SDK
+
+### Process
 
 * 进程
 
@@ -130,6 +132,10 @@
   exec </dev/tty // 将exec输出恢复为标准输出
   ```
 
+
+
+### Pipe
+
 * 管道
 
   进程通信机制
@@ -153,6 +159,10 @@
   ```bash
   find . -name * | xargs cat | wc -l // 找到所有文件内容并统计行数
   ```
+
+
+
+### SDK
 
 * indent 命令
 
