@@ -11,5 +11,6 @@ Notes include:
 * Process
 * Usage of Pipe
 * Related SDK
-* Shell
+* Shell Basic
+* Shell Statement
 
