@@ -1,4 +1,4 @@
-# Shell
+# Shell Basic
 
 * shell
 
@@ -159,6 +159,8 @@ PATH = .:$PATH
   
 * 命令替换
 
+  $(command) 或者 \`command\` 将command输出作为参数替换
+
   ```bash
   // $(command) 
   echo "today $(date)"
@@ -195,7 +197,7 @@ PATH = .:$PATH
   echo $2 // bbb
   ```
 
-* 内置字符串操作
+* 内置字符串操作(提取子串，转换大小写等)
 
   ```bash
   ${#var} // calculate string length
@@ -206,5 +208,4 @@ PATH = .:$PATH
   ${var,,} // change to lowcase
   ```
 
-  
 
