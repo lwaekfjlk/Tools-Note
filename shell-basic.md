@@ -208,4 +208,12 @@ PATH = .:$PATH
   ${var,,} // change to lowcase
   ```
 
+* man命令
 
+  ```shell
+  man ls
+  man patch
+  //查看 ls/patch 等指令的参数使用方法
+  ```
+
+  
