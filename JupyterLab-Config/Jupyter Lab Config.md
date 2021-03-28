@@ -2,7 +2,10 @@
 
 #### 1. 远程连接设置
 
-* 设置 /.jupyter/jupyter_notebook_config.py内容
+* 与 jupyter notebook 有所不同
+  * 将 jupyteer_notebook_config.py 改为 jupyter_server_config.py
+  * 将 c.NotebookApp 变为 c.ServerApp
+* 设置 /.jupyter/jupyter_serverbook_config.py内容
   * allow_remote_access = True
   * open_browser = False
   * ConnectionFileMixin.ip = '*'
